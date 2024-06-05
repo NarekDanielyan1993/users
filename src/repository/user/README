@@ -1,0 +1,22 @@
+Prerequisites
+
+Node.js installed
+MySQL server installed locally
+Installation
+
+Clone the repository: git clone git@github.com:NarekDanielyan1993/users.git
+Navigate to the project directory: cd users
+Install dependencies: npm install
+Database Setup
+
+Make sure your local MySQL server is running.
+Create a .env file in the root directory and set your MySQL database credentials: DATABASE_URL=mysql://user:password@localhost:3306/database Replace user, password, and database with your MySQL credentials.
+Add these env variables to the .env file PORT= ACCESS_TOKEN_KEY= REFRESH_TOKEN_KEY= HASH_SAULT=
+You can see env example file in env.example located in the root directory.
+
+Run the following commands to initialize the database schema: npx prisma generate npx prisma db push
+To start the application run following command
+
+npm run dev
+
+If you set env PORT variable the application will be served at http://localhost:PORT host otherwise at http://localhost:5000.
